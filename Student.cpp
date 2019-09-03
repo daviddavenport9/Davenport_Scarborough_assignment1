@@ -1,7 +1,22 @@
 #include "Student.h"
 
 bool Student::login(string username, string password){
-  return true;
+  string usernameStudent, passwordStudent, firstName, lastName;
+  ifstream file("students.txt");
+   if (file.fail()) {
+    cerr << "Unable to open file." << endl;
+    exit(1);
+  }
+  while (file >> usernameStudent >> passwordStudent >> firstName >> lastName )
+  {
+  if ((usernameStudent == username) && (passwordStudent ==  password))
+    {
+      fullName = firstName + " " + lastName;
+      return true;
+    }//if
+  }//while
+  cout << "Login as Student failed" << endl;
+  return false;
 }
 
 string Student::getStudentName(){
