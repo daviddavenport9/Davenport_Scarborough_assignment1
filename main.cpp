@@ -69,6 +69,29 @@ while (true){
     cin >> username;
     cout << "  Enter password: ";
     cin >> password;
+    cout << "" << endl;//formatting
+    Student student;
+     if (student.login(username, password) != true)
+      {
+      continue;
+      }//if
+    cout << "You are now logged in as " << student.getStudentName() << endl;
+    cout << "" << endl;//formatting
+    cout << "Do you want to view grades (y/n)?";
+    string gradeResponse;
+    cin >> gradeResponse;
+    if (gradeResponse != "y")
+      {
+        continue;
+      }//if
+    cout << "Student name: " << student.getStudentName() << endl;
+    cout << "Project: " << student.getProjectGrade()  << "%" << endl;
+    cout << "Quiz: " << student.getQuizGrade()  << "%" << endl;
+    cout << "Midterm: " << student.getMidtermGrade()  << "%" << endl;
+    cout << "Final: " << student.getFinalGrade() << "%" << endl;
+    cout << "Overall: " << student.getOverallGrade() << "%" << endl;
+    cout << "" << endl;//formatting
+    continue;
   }//if
   
   
