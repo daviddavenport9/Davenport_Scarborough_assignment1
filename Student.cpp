@@ -7,7 +7,7 @@ bool Student::login(string username, string password){
     cerr << "Unable to open file." << endl;
     exit(1);
   }
-  while (file >> usernameStudent >> passwordStudent >> firstName >> lastName )
+  while (file >> usernameStudent >> passwordStudent >> firstName >> lastName >> projectGrade >> quizGrade >> midtermGrade >> finalGrade)
   {
   if ((usernameStudent == username) && (passwordStudent ==  password))
     {
