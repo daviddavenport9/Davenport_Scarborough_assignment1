@@ -45,7 +45,22 @@ while (true){
     cin >> username;
     cout << "  Enter password: ";
     cin >> password;
-  }
+    cout << "" << endl;//formatting
+    Instructor instructor;
+    if (instructor.login(username, password) != true)
+      {
+      continue;
+      }//if
+    cout << "You are now logged in as " << instructor.getInstructorName() << endl;
+    cout << "" << endl;//formatting
+    cout << "Query Options," << endl;
+    cout << "  1 - View grades of a student" << endl;
+    cout << "  2 - View stats" << endl;
+    int queryOption;
+    cout << "Enter option number: ";
+    cin >> queryOption;
+    
+  }//if
   
     if (userType == 2)//flow for a student
   {
@@ -54,7 +69,7 @@ while (true){
     cin >> username;
     cout << "  Enter password: ";
     cin >> password;
-  }
+  }//if
   
   
 }//while
