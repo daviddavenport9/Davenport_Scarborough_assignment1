@@ -85,11 +85,11 @@ while (true){
         continue;
       }//if
     cout << "Student name: " << student.getStudentName() << endl;
-    cout << "Project: " << student.getProjectGrade()  << "%" << endl;
-    cout << "Quiz: " << student.getQuizGrade()  << "%" << endl;
-    cout << "Midterm: " << student.getMidtermGrade()  << "%" << endl;
-    cout << "Final: " << student.getFinalGrade() << "%" << endl;
-    cout << "Overall: " << student.getOverallGrade() << "%" << endl;
+    cout << "     Project     " << student.getProjectGrade()  << "%" << endl;
+    cout << "     Quiz        " << student.getQuizGrade()  << "%" << endl;
+    cout << "     Midterm     " << student.getMidtermGrade()  << "%" << endl;
+    cout << "     Final       " << student.getFinalGrade() << "%" << endl;
+    cout << "     Overall     " << student.getOverallGrade() << "%" << endl;
     cout << "" << endl;//formatting
     continue;
   }//if
