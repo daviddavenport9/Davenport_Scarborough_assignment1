@@ -49,6 +49,24 @@ Student Instructor::getStudent(string username){
   
 }
 
+bool Instructor::checkUsername(string username){
+  string usernameStudent, passwordStudent, firstName, lastName;
+  int projectGrade, quizGrade, midtermGrade, finalGrade;
+  ifstream file("students.txt");
+   if (file.fail()) {
+    cerr << "Unable to open file." << endl;
+    exit(1);
+  }
+  while (file >> usernameStudent >> passwordStudent >> firstName >> lastName >> projectGrade >> quizGrade >> midtermGrade >> finalGrade)
+  {
+  if (usernameStudent == username)
+    {
+     return true;
+    }//if
+  }//while
+  return false;
+}
+
 Student Instructor::getMinStudent(int gradeType){
 
 }
