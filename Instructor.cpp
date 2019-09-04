@@ -102,7 +102,7 @@ Student Instructor::getMinStudent(int gradeType){
          student.setStudentName(firstName + " " + lastName);
          student.setFinalGrade(min);
        } // if                                                                                                                                                                                       
-     }if(gradeType == 5){ // overall                                                                                                                                                                 
+     }if(gradeType == 5){ // overall - need to get average of every student to compare to min. . .                                                                                                                                                                  
        if(overallGrade <= min){
          min = overallGrade;
          student.setStudentName(firstName + " " + lastName);
