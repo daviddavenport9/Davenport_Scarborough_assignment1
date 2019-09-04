@@ -25,6 +25,7 @@ int main(const int argc, const char * array[]){
   int userType;
   string username;
   string password;
+  string studentUsername;
 while (true){
   cout << "User types," << endl;
   cout << "  1 - Instructor" << endl;
@@ -59,8 +60,20 @@ while (true){
     int queryOption;
     cout << "Enter option number: ";
     cin >> queryOption;
+    if(queryOption == 1){
+      cout << "Enter student username to view grades: ";
+      cin >> studentUsername;
+      Student student = instructor.getStudent(studentUsername);
+      cout << "Student name: "  << student.getStudentName() << endl;
+      cout << "\tProject : "  << student.getProjectGrade() << "%" <<  endl; 
+      cout << "\tQuiz : "  << student.getQuizGrade() << "%" <<  endl; 
+      cout << "\tMidterm : "  << student.getMidtermGrade() << "%" <<  endl; 
+      cout << "\tFinal : "  << student.getFinalGrade() << "%" <<  endl; 
+      cout << "\tOverall : "  << student.getOverallGrade() << "%" <<  endl; 
+    }
+      
+    }//if
     
-  }//if
   
     if (userType == 2)//flow for a student
   {
