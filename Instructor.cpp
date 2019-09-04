@@ -26,6 +26,27 @@ string Instructor::getInstructorName(){
 
 Student Instructor::getStudent(string username){
   Student student;
+  string usernameStudent, passwordStudent, firstName, lastName;
+  int projectGrade, quizGrade, midtermGrade, finalGrade;
+  ifstream file("students.txt");
+   if (file.fail()) {
+    cerr << "Unable to open file." << endl;
+    exit(1);
+  }
+  while (file >> usernameStudent >> passwordStudent >> firstName >> lastName >> projectGrade >> quizGrade >> midtermGrade >> finalGrade)
+  {
+  if (usernameStudent == username)
+    {
+      fullName = firstName + " " + lastName;
+      student.setStudentName(fullName);
+      student.setProjectGrade(projectGrade);
+      student.setQuizGrade(quizGrade);
+      student.setMidtermGrade(midtermGrade);
+      student.setFinalGrade(finalGrade);
+      return student;
+    }//if
+  }//while
+  
 }
 
 Student Instructor::getMinStudent(int gradeType){
