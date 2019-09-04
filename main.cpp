@@ -128,12 +128,11 @@ int main(const int argc, const char * array[]){
         continue;
       }//if                                                                                                                                                                                          
       cout << "Student name: " << student.getStudentName() << endl;
-      cout << "     Project     " << student.getProjectGrade()  << "%" << endl;
-      cout << "     Quiz        " << student.getQuizGrade()  << "%" << endl;
-      cout << "     Midterm     " << student.getMidtermGrade()  << "%" << endl;
-      cout << "     Final       " << student.getFinalGrade() << "%" << endl;
-      cout << "     Overall     " << student.getOverallGrade() << "%" << endl;
-      cout << "" << endl;//formatting                                                                                                                                                                
+      cout << "\tProject" << student.getProjectGrade()  << "%" << endl;
+      cout << "\tQuiz" << student.getQuizGrade()  << "%" << endl;
+      cout << "\tMidterm" << student.getMidtermGrade()  << "%" << endl;
+      cout << "\tFinal" << student.getFinalGrade() << "%" << endl;
+      cout << "\tOverall" << student.getOverallGrade() << "%\n" << endl;                                                                                                                                                            
       continue;
     }//if                                                                                                                                                                                            
 
