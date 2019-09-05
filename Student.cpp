@@ -21,8 +21,8 @@ bool Student::login(string username, string password){
 
 string Student::getStudentName(){
   return fullName;
-}
-
+  }
+  
 int Student::getProjectGrade(){
   return projectGrade;
 }
@@ -40,7 +40,12 @@ int Student::getFinalGrade(){
 }
 
 double Student::getOverallGrade(){
-  return ((projectGrade * 0.30) + (quizGrade * 0.10) + (midtermGrade * 0.20) + (finalGrade * 0.40));
+  overallGrade = ((projectGrade * 0.30) + (quizGrade * 0.10) + (midtermGrade * 0.20) + (finalGrade * 0.40));
+  return overallGrade;
+}
+
+double Student::getOverallGradeV2(){
+  return overallGrade;
 }
 
 void Student::setStudentName(string fullName){
@@ -61,4 +66,8 @@ void Student::setMidtermGrade(int grade){
 
 void Student::setFinalGrade(int grade){
   finalGrade = grade;
+}
+
+void Student::setOverallGrade(int term){
+  overallGrade = term;
 }
