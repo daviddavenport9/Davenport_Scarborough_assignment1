@@ -117,7 +117,53 @@ Grade * 0.40)); // get overall grade from file's grades
 } // getMineStudent                                         
 
 Student Instructor::getMaxStudent(int gradeType){
-
+Student student;
+  string usernameStudent, passwordStudent, firstName, lastName;
+  int projectGrade, quizGrade, midtermGrade, finalGrade;
+  int max = 0;
+  double overallGrade = 0;
+  ifstream file("students.txt");
+   if (file.fail()){
+     cerr << "Unable to open file." << endl;
+     exit(1);
+   } // if                                                                                                                                                                                           
+   while (file >> usernameStudent >> passwordStudent >> firstName >> lastName >> projectGrade >> quizGrade >> midtermGrade >> finalGrade){
+     overallGrade = ((projectGrade * 0.30) + (quizGrade * 0.10) + (midtermGrade * 0.20) + (finalGrade * 0.40));
+     if(gradeType == 1){ // project                                                                                                                               
+                      
+       if(projectGrade >= max){
+         max = projectGrade;
+         student.setStudentName(firstName + " " + lastName);
+         student.setProjectGrade(max);
+       } // if                                                                                                                                                                                       
+     }if(gradeType == 2){ // quiz                                                                                                                                                                    
+       if(quizGrade >= max){
+         max = quizGrade;
+         student.setStudentName(firstName + " " + lastName);
+         student.setQuizGrade(max);
+       } // if                                                                                                                                                                                       
+     }if(gradeType == 3){ // midterm                                                                                                                                                                 
+       if(midtermGrade >= max){
+         max = midtermGrade;
+         student.setStudentName(firstName + " " + lastName);
+         student.setMidtermGrade(max);
+       } // if                                                                                                                                                                                       
+     }if(gradeType == 4){ // final                                                                                                                                                                   
+       if(finalGrade >= max){
+         max = finalGrade;
+         student.setStudentName(firstName + " " + lastName);
+         student.setFinalGrade(max);
+       } // if                                                                                                                                                                                       
+     }if(gradeType == 5){ // overall - need to get average of every student to compare to min. . .                                                               
+                                                                     
+       if(overallGrade >= max){
+         max = overallGrade;
+         student.setStudentName(firstName + " " + lastName);
+         student.setOverallGrade(max);
+       } // if                                                                                                                                                                                       
+     } // if                                                                                                                                                                                         
+   }//while                                                                                                                                                                                          
+   return student;
 }
 
 double Instructor::getAvg(int gradeType){
