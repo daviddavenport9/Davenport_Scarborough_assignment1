@@ -77,42 +77,41 @@ Student Instructor::getMinStudent(int gradeType){
      cerr << "Unable to open file." << endl;
      exit(1);
    } // if                                                                                                                                                                                           
-   while (file >> usernameStudent >> passwordStudent >> firstName >> lastName >> projectGrade >> quizGrade >> midtermGrade >> finalGrade){
-     if(gradeType == 1){ // project                                                               
-       if(projectGrade <= min){                                                                   
-         min = projectGrade;                                                                      
-         student.setStudentName(firstName + " " + lastName);                                      
-         student.setProjectGrade(min);                                                            
-       } // if                                                                                    
-     }if(gradeType == 2){ // quiz                                                                 
-       if(quizGrade <= min){                                                                      
-         min = quizGrade;                                                                         
-         student.setStudentName(firstName + " " + lastName);                                      
-         student.setQuizGrade(min);                                                               
-       } // if                                                                                    
-     }if(gradeType == 3){ // midterm                                                              
-       if(midtermGrade <= min){                                                                   
-         min = midtermGrade;                                                                      
-         student.setStudentName(firstName + " " + lastName);                                      
-         student.setMidtermGrade(min);                                                            
-       } // if                                                                                    
-     }if(gradeType == 4){ // final                                                                
-       if(finalGrade <= min){                                                                     
-         min = finalGrade;                                                                        
-         student.setStudentName(firstName + " " + lastName);                                      
-         student.setFinalGrade(min);                                                              
-       } // if                                                                                    
-     }if(gradeType == 5){ // overall                                                              
-       /*tempOverall = ((projectGrade * 0.30) + (quizGrade * 0.10) + (midtermGrade * 0.20) + (final\
-Grade * 0.40)); // get overall grade from file's grades                                           
-       if(tempOverall <= minOverall){ // check the min                                            
-         minOverall = tempOverall;                                                                
-         student.setStudentName(firstName + " " + lastName);                                      
-         student.setOverallGrade(minOverall);    
-         */
-       } // if                                                                                    
-     } // if                                                                                                                                                                                                        
-   }//while                                                                                                                                                                                          
+      while (file >> usernameStudent >> passwordStudent >> firstName >> lastName >> projectGrade >> quizGrade >> midtermGrade >> finalGrade){
+     overallGrade = ((projectGrade * 0.30) + (quizGrade * 0.10) + (midtermGrade * 0.20) + (finalGrade * 0.40));
+     if(gradeType == 1){ // project                                                                                                                                                                  
+       if(projectGrade <= min){
+         min = projectGrade;
+         student.setStudentName(firstName + " " + lastName);
+         student.setProjectGrade(min);
+       } // if                                                                                                                                                                                       
+     }if(gradeType == 2){ // quiz                                                                                                                                                                    
+       if(quizGrade <= min){
+         min = quizGrade;
+         student.setStudentName(firstName + " " + lastName);
+         student.setQuizGrade(min);
+       } // if                                                                                                                                                                                       
+     }if(gradeType == 3){ // midterm                                                                                                                                                                 
+       if(midtermGrade <= min){
+         min = midtermGrade;
+         student.setStudentName(firstName + " " + lastName);
+         student.setMidtermGrade(min);
+       } // if                                                                                                                                                                                       
+     }if(gradeType == 4){ // final                                                                                                                                                                   
+       if(finalGrade <= min){
+         min = finalGrade;
+         student.setStudentName(firstName + " " + lastName);
+         student.setFinalGrade(min);
+       } // if                                                                                                                                                                                       
+     }if(gradeType == 5){ // overall                                                                                                                                                                 
+       if(overallGrade <= min){
+         min = overallGrade;
+         student.setStudentName(firstName + " " + lastName);
+         student.setOverallGrade(min);
+       } // if                                                                                                                                                                                      
+     } // if                                                                                                                                                                                        \
+                                                                                                                                                                                                     
+   }//while                                                                                                                                                                                                           
    return student;
 } // getMineStudent                                         
 
