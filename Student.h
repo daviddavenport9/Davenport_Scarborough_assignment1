@@ -1,40 +1,40 @@
 #ifndef STUDENT_H
 #define STUDENT_H
 #include <iostream>
-#include <fstream>
 #include <string.h>
 #include <string>
+#include <fstream>
 
 using namespace std;
 class Student {
 
- public:
-  bool login(string username, string password);
-  string getStudentName();
-  int getProjectGrade();
-  int getQuizGrade();
-  int getMidtermGrade();
-  int getFinalGrade();
-  double getOverallGrade();
-  void setStudentName(string fullName);
-  void setProjectGrade(int grade);
-  void setQuizGrade(int grade);
-  void setMidtermGrade(int grade);
-  void setFinalGrade(int grade);
-  void setOverallGrade(int grade);
+public:
+bool login(string username, string password);
+string getStudentName();
+int getProjectGrade();
+int getQuizGrade();
+int getMidtermGrade();
+int getFinalGrade();
+double getOverallGrade();
+double getOverallGradeV2();
+void setStudentName(string fullName);
+void setProjectGrade(int grade);
+void setMidtermGrade(int grade);
+void setQuizGrade(int grade);
+void setFinalGrade(int grade);
+void setOverallGrade(int term);
 
 
- private:
+private:
 
-  string fullName;
-  int projectGrade;
-  int quizGrade;
-  int midtermGrade;
-  int finalGrade;
-  int overallGrade;
+string fullName;
+int projectGrade;
+int quizGrade;
+int midtermGrade;
+int finalGrade;
+double overallGrade;
 
 
 
-}; //Student                                                                                                                                                                                         
+}; //Student
 #endif
-
