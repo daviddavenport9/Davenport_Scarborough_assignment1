@@ -91,33 +91,34 @@ int main(const int argc, const char * array[]){
               queryValue = false;
             } // if                                                                                                                                                
             cout << "" << endl;
-            Student student = instructor.getMinStudent(gradeType);
-            Student student1 = instructor.getMaxStudent(gradeType);
-            if(gradeType == 1){ // project                                                                                                                                                           
+            Student studentMin = instructor.getMinStudent(gradeType);
+            Student studentMax = instructor.getMaxStudent(gradeType);
+            if(gradeType == 1){ // project                                                                                                                                                          \
+                                                                                                                                                                                                     
               cout << "Project grade stats, " << endl;
-              cout << "\tmin " << student.getProjectGrade() << "% (" << student.getStudentName() << ")" << endl;
-              cout << "\tmax " << student1.getProjectGrade() << "% (" << student1.getStudentName() << ")" << endl;
-            }if(gradeType == 2){ // quiz                                                                                                                           
-        
+              cout << "\tmin " << studentMin.getProjectGrade() << "% (" << studentMin.getStudentName() << ")" << endl;
+              cout << "\tmax " << studentMax.getProjectGrade() << "% (" << studentMax.getStudentName() << ")" << endl;
+            }if(gradeType == 2){ // quiz                                                                                                                                                             
+
               cout << "Quiz grade stats, " << endl;
-              cout << "\tmin " << student.getQuizGrade() << "% (" << student.getStudentName() << ")" << endl;
-              cout << "\tmax " << student1.getQuizGrade() << "% (" << student1.getStudentName() << ")" << endl;                  
-            }if(gradeType == 3){ // midterm                                                                                                                       
-             
+              cout << "\tmin " << studentMin.getQuizGrade() << "% (" << studentMin.getStudentName() << ")" << endl;
+              cout << "\tmax " << studentMax.getQuizGrade() << "% (" << studentMax.getStudentName() << ")" << endl;
+            }if(gradeType == 3){ // midterm                                                                                                                                                          
+
               cout << "Midterm grade stats, " << endl;
-              cout << "\tmin " << student.getMidtermGrade() << "% (" << student.getStudentName() << ")" << endl;
-              cout << "\tmax " << student1.getMidtermGrade() << "% (" << student1.getStudentName() << ")" << endl;                                
-            }if(gradeType == 4){ // final                                                                                                                        
-             
+              cout << "\tmin " << studentMin.getMidtermGrade() << "% (" << studentMin.getStudentName() << ")" << endl;
+              cout << "\tmax " << studentMax.getMidtermGrade() << "% (" << studentMax.getStudentName() << ")" << endl;
+            }if(gradeType == 4){ // final                                                                                                                                                            
+
               cout << "Final grade stats, " << endl;
-              cout << "\tmin " << student.getFinalGrade() << "% (" << student.getStudentName() << ")" << endl;
-              cout << "\tmax " << student1.getFinalGrade() << "% (" << student1.getStudentName() << ")" << endl;
-            }if(gradeType == 5){ // overall                                                                                                                       
-        
+              cout << "\tmin " << studentMin.getFinalGrade() << "% (" << studentMin.getStudentName() << ")" << endl;
+              cout << "\tmax " << studentMax.getFinalGrade() << "% (" << studentMax.getStudentName() << ")" << endl;
+            }if(gradeType == 5){ // overall                                                                                                                                                          
+
               cout << "Overall grade stats, " << endl;
-              cout << "\tmin " << student.getOverallGradeV2() << "% (" << student.getStudentName() << ")" << endl;
-              cout << "\tmax " << student1.getOverallGradeV2() << "% (" << student1.getStudentName() << ")" << endl;                   
-            } // if                                                                                                                                                                                  
+              cout << "\tmin " << studentMin.getOverallGradeV2() << "% (" << studentMin.getStudentName() << ")" << endl;
+              cout << "\tmax " << studentMax.getOverallGradeV2() << "% (" << studentMax.getStudentName() << ")" << endl;
+            } // if                                                                                                                                                                                                     
           } // if     
           cout << "" << endl;
           queryValue = false;                                                                                                                                                                               
