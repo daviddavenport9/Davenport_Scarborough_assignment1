@@ -116,8 +116,8 @@ int main(const int argc, const char * array[]){
             }if(gradeType == 5){ // overall                                                                                                                                                          
 
               cout << "Overall grade stats, " << endl;
-              cout << "\tmin " << studentMin.getOverallGradeV2() << "% (" << studentMin.getStudentName() << ")" << endl;
-              cout << "\tmax " << studentMax.getOverallGradeV2() << "% (" << studentMax.getStudentName() << ")" << endl;
+              cout << "\tmin " << studentMin.getOverallGrade() << "% (" << studentMin.getStudentName() << ")" << endl;
+              cout << "\tmax " << studentMax.getOverallGrade() << "% (" << studentMax.getStudentName() << ")" << endl;
             } // if                                                                                                                                                                                                     
           } // if     
           cout << "" << endl;
