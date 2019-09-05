@@ -39,14 +39,15 @@ int Student::getFinalGrade(){
   return finalGrade;
 }
 
-double Student::getOverallGrade(){
+double Student::getOverallGradeCalc(){
   overallGrade = ((projectGrade * 0.30) + (quizGrade * 0.10) + (midtermGrade * 0.20) + (finalGrade * 0.40));
   return overallGrade;
 }
 
-double Student::getOverallGradeV2(){
+double Student::getOverallGrade(){
   return overallGrade;
 }
+
 
 void Student::setStudentName(string fullName){
   this->fullName = fullName;
