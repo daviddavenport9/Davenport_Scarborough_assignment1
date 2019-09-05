@@ -69,6 +69,6 @@ void Student::setFinalGrade(int grade){
   finalGrade = grade;
 }
 
-void Student::setOverallGrade(int term){
+void Student::setOverallGrade(double term){
   overallGrade = term;
 }
