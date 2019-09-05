@@ -22,7 +22,7 @@ void setProjectGrade(int grade);
 void setMidtermGrade(int grade);
 void setQuizGrade(int grade);
 void setFinalGrade(int grade);
-void setOverallGrade(int term);
+void setOverallGrade(double term);
 
 
 private:
