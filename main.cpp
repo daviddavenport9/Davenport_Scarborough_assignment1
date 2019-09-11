@@ -69,7 +69,7 @@ int main(const int argc, const char * array[]){
                 cout << "     Quiz       "  << student.getQuizGrade() << "%" <<  endl;
                 cout << "     Midterm    "  << student.getMidtermGrade() << "%" <<  endl;
                 cout << "     Final      "  << student.getFinalGrade() << "%" <<  endl;
-                cout << "     Overall    "  << student.getOverallGrade() << "%" <<  endl;
+                cout << "     Overall    "  << student.getOverallGradeCalc() << "%" <<  endl;
                 queryValue = false;
               }//if                                                                                                                                                                                  
             else{
@@ -150,7 +150,7 @@ int main(const int argc, const char * array[]){
       cout << "     Quiz       " << student.getQuizGrade()  << "%" << endl;
       cout << "     Midterm    " << student.getMidtermGrade()  << "%" << endl;
       cout << "     Final      " << student.getFinalGrade() << "%" << endl;
-      cout << "     Overall    " << student.getOverallGrade() << "%\n" << endl;                                                                                                                                                            
+      cout << "     Overall    " << student.getOverallGradeCalc() << "%\n" << endl;                                                                                                                                                            
       continue;
     }//if                                                                                                                                                                                            
 
